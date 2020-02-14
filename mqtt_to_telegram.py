@@ -55,7 +55,7 @@ class DataCollector:
        
 
     def on_message(self, client, userdata, message): 
-        text = ("Topic: ", message.topic, " ", str(message.payload.decode("utf-8")))
+        text = ('Topic: {} = {}'.format(message.topic, str(message.payload.decode("utf-8"))))
         
         bot.sendMessage(chat_id=chat_id, text=text)
         
